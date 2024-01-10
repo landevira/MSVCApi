@@ -1,0 +1,3 @@
+docker volume create mysql_productos_volume
+
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=productos -e MYSQL_USER=user -e MYSQL_PASSWORD=abc123.. --name mysql_productos -v mysql_productos_volume:/var/lib/mysql mysql:latest
